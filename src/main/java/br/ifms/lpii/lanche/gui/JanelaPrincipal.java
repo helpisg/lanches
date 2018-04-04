@@ -62,6 +62,11 @@ public class JanelaPrincipal extends JFrame {
         comboBoxPao = new JComboBox(montador.listarPaes());
         comboBoxMolho = new JComboBox(montador.listarMolhos());
         comboBoxSalada = new JComboBox(montador.listarSaladas());
+        comboBoxHamburguer.setEnabled(false);
+        comboBoxMolho.setEnabled(false);
+        comboBoxPao.setEnabled(false);
+        comboBoxSalada.setEnabled(false);
+        
         rotuloHamburguer = new JLabel("Hamburguer");
         rotuloMolho = new JLabel("Molho");
         rotuloPao = new JLabel("Pao");
@@ -90,6 +95,7 @@ public class JanelaPrincipal extends JFrame {
         painel4.add(comboBoxSalada);
 
         botaoCalcular = new JButton("OK");
+        botaoCalcular.setEnabled(false);
         painelBotaoNovo.add(botaoNovo);
         painelBotaoCalcular.add(botaoCalcular);
         painelBotaoCalcular.add(rotuloTotal);
@@ -107,6 +113,11 @@ public class JanelaPrincipal extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 montador.novoLanche();
+                comboBoxHamburguer.setEnabled(true);
+                comboBoxMolho.setEnabled(true);
+                comboBoxPao.setEnabled(true);
+                comboBoxSalada.setEnabled(true);
+                botaoCalcular.setEnabled(true);
             }
         });
 
@@ -128,5 +139,7 @@ public class JanelaPrincipal extends JFrame {
             }
         });
     }
+    
+    
 
 }
