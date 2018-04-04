@@ -56,7 +56,7 @@ public class MontadorDeLanche {
 
         Pao pao = new Pao();
         pao.setDescricao("Francês");
-        pao.setValor(new BigDecimal("3.00"));
+        pao.setValor(new BigDecimal("5.00"));
 
         Pao pao2 = new Pao();
         pao2.setDescricao("Forma");

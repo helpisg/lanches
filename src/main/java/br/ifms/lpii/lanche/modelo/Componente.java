@@ -14,7 +14,12 @@ import java.math.BigDecimal;
 public class Componente {
     private String descricao;
     private BigDecimal valor;
-
+    
+    @Override
+    public String toString(){      
+        return "Comp: "+descricao+" - Valor: "+valor;
+    }
+    
     public String getDescricao() {
         return descricao;
     }
